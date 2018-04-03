@@ -1,2 +1,2 @@
-# react-todo
-todo list by react
+## react-todo
+> Todo list by react
