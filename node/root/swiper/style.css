@@ -1,0 +1,19 @@
+ul,li{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.news-list {
+    /* 解决inline-block元素间隙 */
+    font-size: 0;
+}
+.news-list li{
+    display: inline-block;
+    width: 18%;
+    height: 100px;
+    margin-left: 2%;
+    background-color: yellowgreen;
+}
+.tabs a.active{
+    color: #e4393c;
+}

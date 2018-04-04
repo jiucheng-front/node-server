@@ -1,0 +1,21 @@
+{
+  "name": "package",
+  "version": "1.0.0",
+  "description": "node server",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node server.js",
+    "test": "tests"
+  },
+  "keywords": [
+    "test"
+  ],
+  "author": "jiucheng",
+  "license": "ISC",
+  "devDependencies": {
+    "opn": "^5.3.0"
+  },
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}

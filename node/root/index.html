@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>测试swiper</title>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/css/swiper.min.css"> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.min.js"></script> -->
+    <script src="/swiper/jq3.0.0.min.js"></script>
+    <link rel="stylesheet" href="/swiper/swiper.4.0.2.min.css">
+    <script src="/swiper/swiper.4.0.2.min.js"></script>
+    <link rel="stylesheet" href="/swiper/style.css">
+</head>
+
+<body>
+    
+    <h3>2 前进后退按钮联动文字切换</h3>
+    <!-- tab切换 -->
+    <div id="tabs-container" class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <ul class="news-list">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+            <div class="swiper-slide">
+                <ul class="news-list">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+            <div class="swiper-slide">
+                <ul class="news-list">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+        </div>
+        <!-- 前进后退按钮 -->
+        <div class="swiper-button-next tab-btn-next"></div>
+        <div class="swiper-button-prev tab-btn-prev"></div>
+    </div>
+    <div class="tabs">
+        <a href="javascript:;" class="active">级别1</a>
+        <a href="javascript:;">级别2</a>
+        <a href="javascript:;">级别3</a>
+    </div>
+    <script>
+        window.onload = function () {
+            var tabsSwiper = new Swiper('#tabs-container', {
+                speed: 500,
+                navigation: {
+                    nextEl: '.tab-btn-next',
+                    prevEl: '.tab-btn-prev',
+                },
+                on: {
+                    slideChangeTransitionStart: function () {
+                        $(".tabs .active").removeClass('active');
+                        $(".tabs a").eq(this.activeIndex).addClass('active');
+                    }
+                }
+            })
+            $(".tabs a").on('click', function (e) {
+                e.preventDefault()
+                $(".tabs .active").removeClass('active')
+                $(this).addClass('active')
+                tabsSwiper.slideTo($(this).index())
+            })
+        }
+    </script>
+</body>
+
+</html>
