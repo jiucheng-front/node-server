@@ -15,7 +15,22 @@
 </head>
 
 <body>
-    
+    <!--  -->
+    <h3>1 跑马灯效果</h3>
+    <div id="announcement" class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <a href="#">女博士相亲角被嘲？其实是有“预谋”的行为艺术</a>
+            </div>
+            <div class="swiper-slide">
+                <a href="#">你为什么还没过上你想要的生活</a>
+            </div>
+            <div class="swiper-slide">
+                <a href="#">莲花粉橙色也太美了！连直男都爱的仙女色！</a>
+            </div>
+        </div>
+    </div>
+    <!--  -->
     <h3>2 前进后退按钮联动文字切换</h3>
     <!-- tab切换 -->
     <div id="tabs-container" class="swiper-container">
@@ -59,6 +74,16 @@
     </div>
     <script>
         window.onload = function () {
+            // --------------------------------------------------
+            var announcementSwiper = new Swiper('#announcement', {
+                direction: 'vertical',
+                loop: true,
+                autoplay: {
+                    delay: 3000,
+                    disableOnInteraction: false,
+                }
+            })
+            // --------------------------------------------------
             var tabsSwiper = new Swiper('#tabs-container', {
                 speed: 500,
                 navigation: {

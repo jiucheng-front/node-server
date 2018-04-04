@@ -17,3 +17,20 @@ ul,li{
 .tabs a.active{
     color: #e4393c;
 }
+
+/*  */
+#announcement {
+    height: 2em;
+    background: #f5f8fc;
+    border: 1px solid #d2e1f1;
+    margin: 0.5em;
+}
+#announcement a {
+    color: #294c7f;
+    text-decoration: none;
+    display: block;
+    line-height: 2;
+    height: 2em;
+    text-indent: 0.5em;
+    overflow: hidden;
+}
