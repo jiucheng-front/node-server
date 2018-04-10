@@ -6,17 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>测试swiper</title>
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/css/swiper.min.css"> -->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.min.js"></script> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.0/css/swiper.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.0/js/swiper.min.js"></script>
     <script src="/swiper/jq3.0.0.min.js"></script>
-    <link rel="stylesheet" href="/swiper/swiper.4.0.2.min.css">
-    <script src="/swiper/swiper.4.0.2.min.js"></script>
+    <!-- <link rel="stylesheet" href="/swiper/swiper.4.0.2.min.css">
+    <script src="/swiper/swiper.4.0.2.min.js"></script> -->
     <link rel="stylesheet" href="/swiper/style.css">
 
 </head>
 
 <body>
-    <h3>1 跑马灯效果</h3>
+    <h3>1 上下滚动新闻列表</h3>
     <div id="announcement" class="swiper-container">
         <div class="swiper-wrapper">
             <div class="swiper-slide">
@@ -72,6 +72,22 @@
         <a href="javascript:;">级别2</a>
         <a href="javascript:;">级别3</a>
     </div>
+    <!--  -->
+    <h3>3 跑马灯</h3>
+    <div class="swiper-container marquee-content">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">104月10日【1026991】獲得了：【搖滾貝斯手 約瑞科】</div>
+            <div class="swiper-slide">204月10日【1026991】獲得了：【搖滾貝斯手 約瑞科】</div>
+            <div class="swiper-slide">304月10日【1026991】獲得了：【搖滾貝斯手 約瑞科】</div>
+            <div class="swiper-slide">404月10日【1026991】獲得了：【搖滾貝斯手 約瑞科】</div>
+            <div class="swiper-slide">504月10日【1026991】獲得了：【搖滾貝斯手 約瑞科】</div>
+            <div class="swiper-slide">604月10日【1026991】獲得了：【搖滾貝斯手 約瑞科】</div>
+            <div class="swiper-slide">704月10日【1026991】獲得了：【搖滾貝斯手 約瑞科】</div>
+            <div class="swiper-slide">804月10日【1026991】獲得了：【搖滾貝斯手 約瑞科】</div>
+            <div class="swiper-slide">904月10日【1026991】獲得了：【搖滾貝斯手 約瑞科】</div>
+            <div class="swiper-slide">10 04月10日【1026991】獲得了：【搖滾貝斯手 約瑞科】</div>
+        </div>
+    </div>
     <script>
         window.onload = function () {
             // --------------------------------------------------
@@ -103,6 +119,16 @@
                 $(this).addClass('active')
                 tabsSwiper.slideTo($(this).index())
             })
+            // ---------------------------------------------------------------
+            var swiper = new Swiper('.marquee-content', {
+                // speed: 2500,
+                loop: true,
+                autoplay: {
+                    delay: 2000,
+                    disableOnInteraction: false,
+                    waitForTransition: false,
+                }
+            });
         }
     </script>
 </body>
