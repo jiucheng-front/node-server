@@ -1,0 +1,22 @@
+{
+  "name": "project-blog",
+  "version": "1.0.0",
+  "description": "by now-cli",
+  "main": "index.js",
+  "scripts": {
+    "start": "micro",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "wjf444128852.github.com/node-server/project-blog"
+  },
+  "keywords": [
+    "now-cli"
+  ],
+  "author": "jiucheng",
+  "license": "ISC",
+  "devDependencies": {
+    "micro": "^9.1.4"
+  }
+}
