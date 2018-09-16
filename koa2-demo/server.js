@@ -1,18 +1,38 @@
 const Koa = require("koa")
-const app = new Koa()
+// 引入路由
+const Router = require("koa-router")
+// 使用Logger模块
+const Logger = require("./module/logger")
 
-let port = 3000
+let port = 9200
 var opn = require('opn')
 var uri = 'http://localhost:' + port
 
+const app = new Koa()
+var router = new Router()
 
-// 使用Logger模块
-const Logger = require("./module/logger")
+
+router.get("/", (ctx, next) => {
+    ctx.body = "首页：Hello-Koa2"
+})
+router.get("/about", (ctx, next) => {
+    ctx.body = "关于Koa2"
+})
+
+
 app.use(Logger)
 
-app.use(async (ctx) => {
-    ctx.body = "Hello Koa2"
-})
+app
+  .use(router.routes())
+  .use(router.allowedMethods())
+
+
+
+
+// 1
+// app.use(async (ctx) => {
+//     ctx.body = "Hello Koa2"
+// })
 
 
 // 输出：135642
@@ -37,6 +57,6 @@ app.use(async (ctx) => {
 
 
 app.listen(port, () => {
-    console.log("listening on .."+port)
+    console.log("listening on .." + port)
     opn(uri)
 })
