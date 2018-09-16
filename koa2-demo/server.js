@@ -6,6 +6,9 @@ var opn = require('opn')
 var uri = 'http://localhost:' + port
 
 
+// 使用Logger模块
+const Logger = require("./module/logger")
+app.use(Logger)
 
 app.use(async (ctx) => {
     ctx.body = "Hello Koa2"
