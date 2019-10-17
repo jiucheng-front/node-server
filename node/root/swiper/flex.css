@@ -1,0 +1,88 @@
+.flexWrap{
+  position: relative;
+  padding: 10px;
+}
+.flexWrap h3{
+  font-size: 10px;
+  text-align: center;
+}
+.container1 div{
+  background: #e4393c;
+  font-size: 12px;
+}
+.container1{
+  height: 200px;
+  width: 100%;
+  background: #f5f5d5;
+  margin-top: 10px;
+}
+
+/* 1、子元素水平垂直居中 */
+.flexContainer{
+  /* 子元素垂直水平居中 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.centerItem{
+  width: 100px;
+  height: 100px;
+  /* 子元素垂直水平居中 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 2、左边宽度固定，右边宽度自适应 */
+.item1,.item2{
+  height: 100px;
+}
+.item1{
+  /* 左边宽度固定 */
+  width: 100px;
+  /* 子元素垂直水平居中 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.item2{
+  margin-left: 5px;
+  /* 右边宽度自适应 */
+  flex-grow: 1;
+  /* 子元素文字垂直水平居中 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 3、子元素居中，水平等分 */
+.grow1,.grow2,.grow3{
+  height: 100px;
+  /* 子元素文字垂直水平居中 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 2px;
+}
+.grow1{
+  flex-grow: 1;
+}
+.grow2{
+  flex-grow: 2;
+}
+
+
+.flexContainer2{
+  display: flex;
+  /* 排不下自动换货 */
+  flex-wrap: wrap; 
+}
+.wrap1{
+  width: 100px;
+  margin-left: 2px;
+  margin-top: 2px;
+  /* 文字居中 */
+  display: flex;
+  justify-content: center;
+  align-items:center;
+}
